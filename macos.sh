@@ -14,6 +14,7 @@ cask_after_pkgs=(
     atom
     dropbox
     docker
+    github-desktop
     keybase
 )
 
