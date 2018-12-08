@@ -71,6 +71,12 @@ cmd_system() {
     xcode-select --install
 }
 
+cmd_system_setup() {
+    sudo nvram SystemAudioVolume=" "
+    # Disable natural scrolling
+    defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+}
+
 cmd_brew() {
     util_assert_brew
 
@@ -111,10 +117,11 @@ cmd_rust() {
 
 case $1 in
   "system") cmd_system;;
+  "system-setup") cmd_system_setup;;
   "brew") cmd_brew;;
   "java") cmd_java;;
   "rust") cmd_rust;;
   "")
-    echo "usage: $0 <system|brew|rust|java>"
+    echo "usage: $0 <system|system-setup|brew|rust|java>"
     ;;
 esac
