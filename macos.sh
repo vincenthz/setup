@@ -14,6 +14,7 @@ cask_after_pkgs=(
     atom
     dropbox
     docker
+    keybase
 )
 
 brew_pkgs=(
@@ -21,7 +22,6 @@ brew_pkgs=(
     gpg
     haskell-stack
     htop
-    "imagemagick --with-webp"
     mpv
     nmap
     neovim
@@ -30,7 +30,10 @@ brew_pkgs=(
     tig
     tree
     zola
+    pandoc
 )
+
+brew_imagemagick="imagemagick --with-webp"
 
 java_cask=(
     java
@@ -39,6 +42,13 @@ java_cask=(
 java_pkgs=(
     scala
     sbt
+)
+
+vscode_exts=(
+  vscodevim.vim
+  rust-lang.rust
+  alanz.vscode-hie-server
+  yzhang.markdown-all-in-one
 )
 
 ########################################################
@@ -90,6 +100,7 @@ cmd_brew() {
 
     brew cask install --appdir="/Applications" ${cask_important_pkgs[@]}
     brew install ${brew_pkgs[@]}
+    brew install ${brew_imagemagick}
     brew cask install --appdir="/Applications" ${cask_after_pkgs[@]}
 }
 
@@ -104,7 +115,6 @@ cmd_rust() {
     if test ! $(which rustup); then
         installing "rust"
         curl https://sh.rustup.rs -sSf | sh
-
     fi
 
     rustup install nightly
@@ -127,7 +137,17 @@ cmd_machine() {
     cat ~/.ssh/id_ed25519.pub
 }
 
+cmd_code() {
+    if test ! $(which code); then
+	echo "code not installed"
+	exit 1
+    fi
+    for ext in ${vscode_exts[@]}
+    do code --install-extension ${ext}; done
+}
+
 cmd_dotfile() {
+    echo ""
 }
 
 case $1 in
@@ -137,6 +157,7 @@ case $1 in
   "machine") cmd_machine;;
   "java") cmd_java;;
   "rust") cmd_rust;;
+  "code") cmd_code;;
   "")
     echo "usage: $0 <system|system-setup|brew|rust|java>"
     ;;
