@@ -27,6 +27,7 @@ brew_pkgs=(
     neovim
     node
     tmux
+    tig
     tree
     zola
 )
@@ -115,10 +116,25 @@ cmd_rust() {
     rustup update
 }
 
+cmd_machine() {
+    git config --global user.name "Vincent Hanquez"
+    git config --global user.email "vincent@typed.io"
+    git config --global credential.helper osxkeychain
+
+    if [ -f ~/.ssh/id_ed25519 ]; then
+        ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
+    fi
+    cat ~/.ssh/id_ed25519.pub
+}
+
+cmd_dotfile() {
+}
+
 case $1 in
   "system") cmd_system;;
   "system-setup") cmd_system_setup;;
   "brew") cmd_brew;;
+  "machine") cmd_machine;;
   "java") cmd_java;;
   "rust") cmd_rust;;
   "")
