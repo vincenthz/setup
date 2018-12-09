@@ -155,11 +155,12 @@ case $1 in
   "system") cmd_system;;
   "system-setup") cmd_system_setup;;
   "brew") cmd_brew;;
+  # setup git and ssh for this machine
   "machine") cmd_machine;;
   "java") cmd_java;;
   "rust") cmd_rust;;
   "code") cmd_code;;
   "")
-    echo "usage: $0 <system|system-setup|brew|rust|java>"
+    echo "usage: $0 <system|system-setup|brew|machine|rust|java>"
     ;;
 esac
