@@ -31,6 +31,7 @@ brew_pkgs=(
     tig
     tree
     zola
+    wget
     pandoc
 )
 
@@ -87,6 +88,8 @@ cmd_system_setup() {
     sudo nvram SystemAudioVolume=" "
     # Disable natural scrolling
     defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+    # Press and Hold
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 }
 
 cmd_brew() {
