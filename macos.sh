@@ -16,6 +16,7 @@ cask_after_pkgs=(
     docker
     github
     keybase
+    openemu
 )
 
 brew_pkgs=(
@@ -32,6 +33,7 @@ brew_pkgs=(
     tree
     zola
     pandoc
+    wireguard-tools
 )
 
 brew_imagemagick="imagemagick --with-webp"
