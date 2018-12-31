@@ -138,7 +138,7 @@ cmd_machine() {
     git config --global user.email "vincent@typed.io"
     git config --global credential.helper osxkeychain
 
-    if [ -f ~/.ssh/id_ed25519 ]; then
+    if [ ! -f ~/.ssh/id_ed25519 ]; then
         ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
     fi
     cat ~/.ssh/id_ed25519.pub
