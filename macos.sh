@@ -119,6 +119,7 @@ cmd_rust() {
     if test ! $(which rustup); then
         installing "rust"
         curl https://sh.rustup.rs -sSf | sh
+        source $HOME/.cargo/env
     fi
 
     rustup install nightly
