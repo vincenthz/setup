@@ -157,6 +157,13 @@ cmd_dotfile() {
     echo ""
 }
 
+cmd_haskell_preload() {
+    pushd /tmp
+    stack new dummy
+    cd dummy
+    stack build
+}
+
 case $1 in
   "system") cmd_system;;
   "system-setup") cmd_system_setup;;
@@ -166,6 +173,7 @@ case $1 in
   "java") cmd_java;;
   "rust") cmd_rust;;
   "code") cmd_code;;
+  "haskell") cmd_haskell_preload;;
   "")
     echo "usage: $0 <system|system-setup|brew|machine|rust|java>"
     ;;
