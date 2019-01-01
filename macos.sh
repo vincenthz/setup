@@ -146,8 +146,8 @@ cmd_machine() {
 
 cmd_code() {
     if test ! $(which code); then
-	echo "code not installed"
-	exit 1
+        echo "error: code not installed"
+        exit 1
     fi
     for ext in ${vscode_exts[@]}
     do code --install-extension ${ext}; done
@@ -158,6 +158,11 @@ cmd_dotfile() {
 }
 
 cmd_haskell_preload() {
+    if test ! $(which stack); then
+        echo "error: stack not installed"
+        exit 1
+    fi
+
     pushd /tmp
     stack new dummy
     cd dummy
@@ -165,16 +170,16 @@ cmd_haskell_preload() {
 }
 
 case $1 in
-  "system") cmd_system;;
-  "system-setup") cmd_system_setup;;
-  "brew") cmd_brew;;
-  # setup git and ssh for this machine
-  "machine") cmd_machine;;
-  "java") cmd_java;;
-  "rust") cmd_rust;;
-  "code") cmd_code;;
-  "haskell") cmd_haskell_preload;;
-  "")
-    echo "usage: $0 <system|system-setup|brew|machine|rust|java>"
-    ;;
+    "system") cmd_system;;
+    "system-setup") cmd_system_setup;;
+    "brew") cmd_brew;;
+    # setup git and ssh for this machine
+    "machine") cmd_machine;;
+    "java") cmd_java;;
+    "rust") cmd_rust;;
+    "code") cmd_code;;
+    "haskell") cmd_haskell_preload;;
+    "")
+        echo "usage: $0 <system|system-setup|brew|machine|rust|java|code|haskell>"
+        ;;
 esac
