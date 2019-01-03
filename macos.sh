@@ -48,12 +48,11 @@ java_pkgs=(
     sbt
 )
 
-vscode_exts=(
-  vscodevim.vim
-  rust-lang.rust
-  alanz.vscode-hie-server
-  yzhang.markdown-all-in-one
-)
+if [ ! -f common.sh ]; then
+    echo "missing common.sh script"
+    exit 2
+fi
+source common.sh
 
 ########################################################
 
@@ -144,15 +143,6 @@ cmd_machine() {
     cat ~/.ssh/id_ed25519.pub
 }
 
-cmd_code() {
-    if test ! $(which code); then
-        echo "error: code not installed"
-        exit 1
-    fi
-    for ext in ${vscode_exts[@]}
-    do code --install-extension ${ext}; done
-}
-
 cmd_dotfile() {
     echo ""
 }
@@ -178,8 +168,9 @@ case $1 in
     "java") cmd_java;;
     "rust") cmd_rust;;
     "code") cmd_code;;
+    "atom") cmd_atom;;
     "haskell") cmd_haskell_preload;;
     "")
-        echo "usage: $0 <system|system-setup|brew|machine|rust|java|code|haskell>"
+        echo "usage: $0 <system|system-setup|brew|machine|rust|java|code|atom|haskell>"
         ;;
 esac
