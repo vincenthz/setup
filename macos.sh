@@ -35,6 +35,7 @@ brew_pkgs=(
     wget
     pandoc
     wireguard-tools
+    cocoapods
 )
 
 brew_imagemagick="imagemagick --with-webp"
