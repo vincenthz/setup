@@ -5,6 +5,7 @@ vscode_exts=(
   rust-lang.rust
   alanz.vscode-hie-server
   yzhang.markdown-all-in-one
+  bungcip.better-toml
 )
 
 atom_exts=(
