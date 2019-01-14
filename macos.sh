@@ -118,6 +118,11 @@ cmd_java() {
     brew install ${java_pkgs[@]}
 }
 
+cmd_latex() {
+    util_assert_brew
+    brew cask install mactex
+}
+
 cmd_rust() {
     if test ! $(which rustup); then
         installing "rust"
@@ -171,6 +176,7 @@ case $1 in
     "rust") cmd_rust;;
     "code") cmd_code;;
     "atom") cmd_atom;;
+    "latex") cmd_latex;;
     "haskell") cmd_haskell_preload;;
     "")
         echo "usage: $0 <system|system-setup|brew|machine|rust|java|code|atom|haskell>"
