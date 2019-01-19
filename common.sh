@@ -6,6 +6,7 @@ vscode_exts=(
   alanz.vscode-hie-server
   yzhang.markdown-all-in-one
   bungcip.better-toml
+  makarius.isabelle
 )
 
 atom_exts=(
