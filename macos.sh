@@ -37,6 +37,7 @@ brew_pkgs=(
     wireguard-tools
     cocoapods
     qemu
+    idris
 )
 
 brew_imagemagick="imagemagick --with-webp"
