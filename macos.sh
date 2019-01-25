@@ -17,6 +17,7 @@ cask_after_pkgs=(
     github
     keybase
     openemu
+    tla-plus-toolbox
 )
 
 brew_pkgs=(
@@ -38,6 +39,10 @@ brew_pkgs=(
     cocoapods
     qemu
     idris
+    graphviz
+    ocaml
+    opam
+    fstar
 )
 
 brew_imagemagick="imagemagick --with-webp"
