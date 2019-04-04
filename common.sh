@@ -7,6 +7,7 @@ vscode_exts=(
   yzhang.markdown-all-in-one
   bungcip.better-toml
   makarius.isabelle
+  james-yu.latex-workshop
 )
 
 atom_exts=(
