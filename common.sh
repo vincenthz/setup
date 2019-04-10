@@ -15,6 +15,11 @@ atom_exts=(
   teletype
 )
 
+cargo_program_exts=(
+  cargo-tree
+  count
+)
+
 cmd_code() {
     if test ! $(which code); then
         echo "error: code not installed"
@@ -35,4 +40,13 @@ cmd_atom() {
     fi
     for ext in ${atom_exts[@]}
     do apm install ${ext}; done
+}
+
+cmd_rust_install() {
+    if test ! $(which cargo); then
+        echo "error: cargo package manager not installed"
+        exit 1
+    fi
+    for ext in ${cargo_program_exts[@]}
+    do cargo install ${ext}; done
 }
