@@ -21,6 +21,7 @@ cask_after_pkgs=(
 )
 
 brew_pkgs=(
+    cmake
     go
     gpg
     haskell-stack

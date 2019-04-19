@@ -8,6 +8,7 @@ vscode_exts=(
   bungcip.better-toml
   makarius.isabelle
   james-yu.latex-workshop
+  josser.language-fstar
 )
 
 atom_exts=(
