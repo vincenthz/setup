@@ -44,6 +44,7 @@ brew_pkgs=(
     ocaml
     opam
     fstar
+    z3
 )
 
 brew_imagemagick="imagemagick --with-webp"
