@@ -19,6 +19,7 @@ atom_exts=(
 cargo_program_exts=(
   cargo-tree
   count
+  mdbook
   diesel_cli
 )
 
