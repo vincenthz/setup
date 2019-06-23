@@ -18,6 +18,7 @@ cask_after_pkgs=(
     keybase
     openemu
     tla-plus-toolbox
+    krita
 )
 
 brew_pkgs=(
