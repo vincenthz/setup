@@ -19,6 +19,7 @@ cask_after_pkgs=(
     openemu
     tla-plus-toolbox
     krita
+    libreoffice
 )
 
 brew_pkgs=(
@@ -38,6 +39,7 @@ brew_pkgs=(
     zola
     wget
     pandoc
+    pinentry-mac
     wireguard-tools
     cocoapods
     qemu
