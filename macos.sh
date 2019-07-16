@@ -20,6 +20,7 @@ cask_after_pkgs=(
     tla-plus-toolbox
     krita
     libreoffice
+    sage
 )
 
 brew_pkgs=(
