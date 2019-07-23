@@ -21,6 +21,7 @@ cask_after_pkgs=(
     krita
     libreoffice
     sage
+    tor-browser
 )
 
 brew_pkgs=(
