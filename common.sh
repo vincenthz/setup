@@ -21,6 +21,7 @@ cargo_program_exts=(
   count
   mdbook
   diesel_cli
+  cbindgen
 )
 
 cmd_code() {
