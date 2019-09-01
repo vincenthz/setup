@@ -148,7 +148,7 @@ cmd_rust() {
     rustup component add rustfmt-preview
     rustup component add rls
     rustup component add rust-docs
-    rustup default nightly
+    rustup default stable
 
     rustup update
 }
@@ -192,7 +192,8 @@ case $1 in
     "atom") cmd_atom;;
     "latex") cmd_latex;;
     "haskell") cmd_haskell_preload;;
+    "rust-programs") cmd_rust_install;;
     "")
-        echo "usage: $0 <system|system-setup|brew|machine|rust|java|code|atom|haskell>"
+        echo "usage: $0 <system|system-setup|brew|machine|rust|java|code|atom|haskell|rust-programs>"
         ;;
 esac
