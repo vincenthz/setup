@@ -1,4 +1,4 @@
-#!/bin/bash
+x#!/bin/bash
 
 vscode_exts=(
   vscodevim.vim
