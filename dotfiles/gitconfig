@@ -5,3 +5,22 @@
     insteadOf = "gh:"
     pushInsteadOf = "github:"
     pushInsteadOf = "git://github.com/"
+[url "git@github.com:vincenthz/"]
+    insteadOf = ghv:
+[alias]
+	co = checkout
+	cob = checkout -b
+	st = status
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	redate = rebase --committer-date-is-author-date
+	fo = fetch origin
+	po = push origin
+	pom = push origin master
+	poh = push origin HEAD
+	plo = pull origin
+	unstage = reset --soft HEAD
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	publish = "!git push -u origin $(git branch-name)"
+	unpublish = "!git push origin :$(git branch-name)"
+	rebase-branch = "!git rebase -i `git merge-base master HEAD`"

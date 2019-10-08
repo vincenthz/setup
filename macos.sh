@@ -22,6 +22,7 @@ cask_after_pkgs=(
     libreoffice
     sage
     tor-browser
+    hyper
 )
 
 brew_pkgs=(
