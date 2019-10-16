@@ -3,6 +3,7 @@
 cask_important_pkgs=(
     google-chrome
     visual-studio-code
+    hyper
 )
 
 cask_after_pkgs=(
