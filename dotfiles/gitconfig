@@ -1,12 +1,14 @@
 [push]
     # Make `git push` push relevant annotated tags when pushing branches out.
     followTags = true
+[commit]
+	gpgsign = true
 [url "git@github.com:"]
-    insteadOf = "gh:"
-    pushInsteadOf = "github:"
-    pushInsteadOf = "git://github.com/"
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
 [url "git@github.com:vincenthz/"]
-    insteadOf = ghv:
+	insteadOf = ghv:
 [alias]
 	co = checkout
 	cob = checkout -b
@@ -24,3 +26,6 @@
 	publish = "!git push -u origin $(git branch-name)"
 	unpublish = "!git push origin :$(git branch-name)"
 	rebase-branch = "!git rebase -i `git merge-base master HEAD`"
+[pager]
+	branch = false
+	grep = false
