@@ -24,6 +24,7 @@ cask_after_pkgs=(
     sage
     tor-browser
     hyper
+    telegram
 )
 
 brew_pkgs=(
@@ -51,7 +52,7 @@ brew_pkgs=(
     graphviz
     ocaml
     opam
-    fstar
+    #fstar -- doesn't exist anymore :(
     z3
 )
 
