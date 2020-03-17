@@ -3,6 +3,7 @@
 cask_important_pkgs=(
     google-chrome
     visual-studio-code
+    hyper
 )
 
 cask_after_pkgs=(
@@ -22,6 +23,8 @@ cask_after_pkgs=(
     libreoffice
     sage
     tor-browser
+    hyper
+    telegram
 )
 
 brew_pkgs=(
@@ -49,6 +52,7 @@ brew_pkgs=(
     graphviz
     ocaml
     opam
+    #fstar -- doesn't exist anymore :(
     z3
     github/gh/gh
 )
@@ -148,7 +152,7 @@ cmd_rust() {
     rustup component add rustfmt-preview
     rustup component add rls
     rustup component add rust-docs
-    rustup default nightly
+    rustup default stable
 
     rustup update
 }
@@ -192,7 +196,8 @@ case $1 in
     "atom") cmd_atom;;
     "latex") cmd_latex;;
     "haskell") cmd_haskell_preload;;
+    "rust-programs") cmd_rust_install;;
     "")
-        echo "usage: $0 <system|system-setup|brew|machine|rust|java|code|atom|haskell>"
+        echo "usage: $0 <system|system-setup|brew|machine|rust|java|code|atom|haskell|rust-programs>"
         ;;
 esac
