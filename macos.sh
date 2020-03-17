@@ -49,8 +49,8 @@ brew_pkgs=(
     graphviz
     ocaml
     opam
-    fstar
     z3
+    github/gh/gh
 )
 
 brew_imagemagick="imagemagick --with-webp"
