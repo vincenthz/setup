@@ -32,6 +32,7 @@ brew_pkgs=(
     findutils
     go
     gpg
+    grpcurl
     haskell-stack
     htop
     mpv
