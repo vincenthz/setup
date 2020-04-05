@@ -32,6 +32,7 @@ brew_pkgs=(
     findutils
     go
     gpg
+    grpcurl
     haskell-stack
     htop
     mpv
@@ -54,6 +55,7 @@ brew_pkgs=(
     opam
     #fstar -- doesn't exist anymore :(
     z3
+    github/gh/gh
 )
 
 brew_imagemagick="imagemagick --with-webp"
