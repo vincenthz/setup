@@ -1,0 +1,2 @@
+alias weather="curl https://wttr.in/"
+alias weather-hk="curl https://wttr.in/HongKong"
