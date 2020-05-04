@@ -24,6 +24,7 @@ cargo_program_exts=(
   diesel_cli
   cbindgen
   bat
+  wasm-nm
 )
 
 cmd_code() {
