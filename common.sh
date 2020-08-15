@@ -1,14 +1,25 @@
 #!/bin/bash
 
 vscode_exts=(
-  vscodevim.vim
-  rust-lang.rust
-  alanz.vscode-hie-server
-  yzhang.markdown-all-in-one
-  bungcip.better-toml
-  makarius.isabelle
-  james-yu.latex-workshop
-  josser.language-fstar
+	bungcip.better-toml
+	forivall.abnf
+	GitHub.vscode-pull-request-github
+	haskell.haskell
+	James-Yu.latex-workshop
+	josser.language-fstar
+	justusadam.language-haskell
+	makarius.Isabelle
+	matklad.rust-analyzer
+	ms-vscode.cpptools
+	ms-vscode.hexeditor
+	mtxr.sqltools
+	redhat.java
+	scala-lang.scala
+	truefire.lilypond
+	VisualStudioExptTeam.vscodeintellicode
+	vscodevim.vim
+	yzhang.markdown-all-in-one
+	zxh404.vscode-proto3
 )
 
 atom_exts=(
