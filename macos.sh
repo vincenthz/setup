@@ -11,7 +11,6 @@ cask_after_pkgs=(
     slack
     transmission
     transmission-remote-gui
-    tunnelbear
     atom
     dropbox
     docker
@@ -25,6 +24,7 @@ cask_after_pkgs=(
     tor-browser
     hyper
     telegram
+    tunnelbrick
 )
 
 brew_pkgs=(
