@@ -56,6 +56,8 @@ brew_pkgs=(
     #fstar -- doesn't exist anymore :(
     z3
     github/gh/gh
+    gitui
+    diskonaut
 )
 
 brew_imagemagick="imagemagick --with-webp"
