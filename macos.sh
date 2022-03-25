@@ -114,6 +114,8 @@ cmd_system_setup() {
     defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
     # Press and Hold
     defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+    # Remove desktop icons
+    defaults write com.apple.finder CreateDesktop -bool false
 }
 
 cmd_brew() {
